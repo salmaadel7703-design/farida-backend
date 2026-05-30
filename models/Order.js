@@ -6,6 +6,8 @@ const orderSchema = new mongoose.Schema({
   address: { type: String, required: true },
   governorate: { type: String, required: true },
   payMethod: { type: String, required: true },
+  vodafonePhone: { type: String },
+  paidAmount: { type: Number },
   items: [
     {
       name: String,
