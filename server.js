@@ -19,6 +19,7 @@ app.use('/api/orders', require('./routes/orders'))
 app.use('/api/users', require('./routes/users'))
 app.use('/api/slides', require('./routes/slides'))
 app.use('/api/offers', require('./routes/offers'))
+app.use('/api/coupons', require('./routes/coupons'))
 
 app.post('/api/upload', require('./upload').single('image'), (req, res) => {
   res.json({ url: `http://localhost:5000/uploads/${req.file.filename}` })
