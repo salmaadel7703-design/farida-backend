@@ -10,6 +10,9 @@ const productSchema = new mongoose.Schema({
   cat: { type: String, required: true },
   stock: { type: Number, default: 0 },
   image: { type: String },
+  images: [{ type: String }],      // ✅ صور متعددة
+  colors: { type: String },         // ✅ الألوان
+  sizes: { type: String },          // ✅ المقاسات
 }, { timestamps: true })
 
 module.exports = mongoose.model('Product', productSchema)
