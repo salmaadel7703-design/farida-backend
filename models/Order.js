@@ -19,7 +19,9 @@ const orderSchema = new mongoose.Schema({
   ],
   total: { type: Number, required: true },
   shipping: { type: Number, required: true },
-  status: { type: String, default: 'pending' },
+  coupon: { type: String, default: '' },
+  discount: { type: Number, default: 0 },
+  status: { type: String, default: 'جاري التجهيز' },
   trackCode: { type: String },
 }, { timestamps: true })
 
