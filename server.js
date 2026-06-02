@@ -20,6 +20,7 @@ app.use('/api/users', require('./routes/users'))
 app.use('/api/slides', require('./routes/slides'))
 app.use('/api/offers', require('./routes/offers'))
 app.use('/api/coupons', require('./routes/coupons'))
+app.use('/api/bundles', require('./routes/bundles'))
 
 app.post('/api/upload', require('./upload').single('image'), (req, res) => {
   res.json({ url: `https://farida-backend-production.up.railway.app/uploads/${req.file.filename}` })
