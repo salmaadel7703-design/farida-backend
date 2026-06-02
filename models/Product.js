@@ -8,11 +8,12 @@ const productSchema = new mongoose.Schema({
   badge: { type: String },
   badgeEn: { type: String },
   cat: { type: String, required: true },
+  subCat: { type: String },
   stock: { type: Number, default: 0 },
   image: { type: String },
-  images: [{ type: String }],      // ✅ صور متعددة
-  colors: { type: String },         // ✅ الألوان
-  sizes: { type: String },          // ✅ المقاسات
+  images: [{ type: String }],
+  colors: { type: String },
+  sizes: { type: String },
 }, { timestamps: true })
 
 module.exports = mongoose.model('Product', productSchema)
